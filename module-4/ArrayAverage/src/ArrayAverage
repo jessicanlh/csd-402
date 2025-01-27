@@ -1,0 +1,62 @@
+import java.util.Arrays;
+
+public class ArrayAverage {
+
+    // Method to calculate the average of a short array
+    public static short average(short[] array) {
+        int sum = 0; // Use int to avoid overflow
+        for (short num : array) {
+            sum += num;
+        }
+        return (short) (sum / array.length);
+    }
+
+    // Method to calculate the average of an int array
+    public static int average(int[] array) {
+        long sum = 0; // Use long to avoid overflow
+        for (int num : array) {
+            sum += num;
+        }
+        return (int) (sum / array.length);
+    }
+
+    // Method to calculate the average of a long array
+    public static long average(long[] array) {
+        long sum = 0;
+        for (long num : array) {
+            sum += num;
+        }
+        return sum / array.length;
+    }
+
+    // Method to calculate the average of a double array
+    public static double average(double[] array) {
+        double sum = 0;
+        for (double num : array) {
+            sum += num;
+        }
+        return sum / array.length;
+    }
+
+    // Test program
+    public static void main(String[] args) {
+        // Test data
+        short[] shortArray = {10, 20, 30};
+        int[] intArray = {10, 20, 30, 40};
+        long[] longArray = {100, 200, 300, 400, 500};
+        double[] doubleArray = {10.5, 20.5, 30.5, 40.5, 50.5, 60.5};
+
+        // Display results
+        System.out.println("Short array: " + Arrays.toString(shortArray));
+        System.out.println("Average: " + average(shortArray) + "\n");
+
+        System.out.println("Int array: " + Arrays.toString(intArray));
+        System.out.println("Average: " + average(intArray) + "\n");
+
+        System.out.println("Long array: " + Arrays.toString(longArray));
+        System.out.println("Average: " + average(longArray) + "\n");
+
+        System.out.println("Double array: " + Arrays.toString(doubleArray));
+        System.out.println("Average: " + average(doubleArray) + "\n");
+    }
+}
